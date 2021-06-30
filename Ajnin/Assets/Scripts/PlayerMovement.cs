@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
                 body.velocity = Vector2.zero;
             }
             else
-                body.gravityScale = 1;
+                body.gravityScale = 2;
 
             if (Input.GetKey(KeyCode.Space))
                 Jump();
