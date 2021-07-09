@@ -94,4 +94,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return horizontalInput == 0 && isGrounded() && !onWall();
     }
+
+    
 }
