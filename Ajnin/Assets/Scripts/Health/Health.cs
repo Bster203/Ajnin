@@ -5,11 +5,13 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    private float currentHealth;
+    public float currentHealth { get; private set; }
+    private Animator anim;
 
     private void Awake()
     {
         currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(float _damage)
@@ -18,11 +20,12 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            //player hurt
+            anim.SetTrigger("hurt");
         }
         else
         {
-            //player dead
+            anim.SetTrigger("die");
         }
     }
+
 }

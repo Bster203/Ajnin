@@ -569,6 +569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456196910}
+  - component: {fileID: 456196911}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -597,6 +598,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &456196911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456196909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5322d254359143a499d9cc2f3f710451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1490465876}
+  totalhealthBar: {fileID: 440390717}
+  currenthealthBar: {fileID: 514637349}
 --- !u!1 &470716609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c1cabed8e47e04caddc86d428f5c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 0
+  startingHealth: 3
 --- !u!1 &1515584114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8729968021562903447, guid: b32bc02dfa76ab54ba1b4278ede5a3dd,
