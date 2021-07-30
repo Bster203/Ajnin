@@ -26,11 +26,18 @@ public class Projectile : MonoBehaviour
         if (lifetime > 1) gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
+
+        
+       if (other.gameObject.tag == "Enemy")
+       {
+          Destroy(other.gameObject);
+       }
+        
     }
 
     public void SetDirection(float _direction)
@@ -53,5 +60,5 @@ public class Projectile : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-
+    
 }
