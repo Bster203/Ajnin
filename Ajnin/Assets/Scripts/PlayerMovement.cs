@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
     
+    
     private void Awake()
     {
         //Grab references for rigidbody and animator from
@@ -95,5 +96,5 @@ public class PlayerMovement : MonoBehaviour
         return horizontalInput == 0 && isGrounded() && !onWall();
     }
 
-        
+    
 }
