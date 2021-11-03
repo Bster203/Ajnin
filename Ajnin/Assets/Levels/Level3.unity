@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: damage
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3618009753010974104, guid: e00fae3623f7f6e47a5d688810856c9d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d,
         type: 3}
       propertyPath: m_Name
@@ -206,13 +211,29 @@ PrefabInstance:
     - target: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d,
         type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5342335891119114943, guid: e00fae3623f7f6e47a5d688810856c9d,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342335891119114943, guid: e00fae3623f7f6e47a5d688810856c9d,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439432595044548741, guid: e00fae3623f7f6e47a5d688810856c9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fa7ccda57ea232489a40129d872165b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00fae3623f7f6e47a5d688810856c9d, type: 3}
 --- !u!4 &156985281 stripped
@@ -244,7 +265,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.39, y: 0.4}
+    oldSize: {x: 0.52, y: 0.56}
     newSize: {x: 0.39, y: 0.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -253,6 +274,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &156985284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156985282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e264c28d69ccd4e9c581efab08730f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  lineOfSite: 0
+  shootingRange: 0
+  fireRate: 1
+  bullet: {fileID: 156985282}
+  bulletParent: {fileID: 1471416471}
+  damage: 1
 --- !u!1001 &177927147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -650,7 +690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378906762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -13.6, z: 0}
+  m_LocalPosition: {x: 172.76, y: -14.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151658082}
@@ -851,6 +891,7 @@ GameObject:
   - component: {fileID: 443093547}
   - component: {fileID: 443093546}
   - component: {fileID: 443093545}
+  - component: {fileID: 443093550}
   m_Layer: 0
   m_Name: Last Boss
   m_TagString: Enemy
@@ -880,14 +921,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443093543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1e264c28d69ccd4e9c581efab08730f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  lineOfSite: 27.73
-  shootingRange: 10.23
+  lineOfSite: 27.88
+  shootingRange: 11.85
   fireRate: 1
   bullet: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d, type: 3}
   bulletParent: {fileID: 1471416471}
@@ -1008,6 +1049,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &443093550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443093543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6aaa83d54c4644582d8754f52f85d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  stoppingDistance: 10
+  retreatDistance: 10
+  startTimeBtwShots: 1
+  projectile: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d,
+    type: 3}
 --- !u!4 &445209216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8729968021562903440, guid: b32bc02dfa76ab54ba1b4278ede5a3dd,
