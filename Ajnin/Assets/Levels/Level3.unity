@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 3363145027778596150, guid: e00fae3623f7f6e47a5d688810856c9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3363145027778596150, guid: e00fae3623f7f6e47a5d688810856c9d,
         type: 3}
@@ -921,18 +921,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443093543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1e264c28d69ccd4e9c581efab08730f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  lineOfSite: 27.88
-  shootingRange: 11.85
+  lineOfSite: 13.7
+  shootingRange: 9.34
   fireRate: 1
   bullet: {fileID: 3912125437111582925, guid: e00fae3623f7f6e47a5d688810856c9d, type: 3}
   bulletParent: {fileID: 1471416471}
-  damage: 2
+  damage: 1
 --- !u!95 &443093546
 Animator:
   serializedVersion: 3
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443093543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc6aaa83d54c4644582d8754f52f85d7, type: 3}
   m_Name: 
@@ -1378,8 +1378,8 @@ Transform:
   - {fileID: 1397010875}
   - {fileID: 1881410724}
   - {fileID: 443093544}
-  - {fileID: 156985281}
   - {fileID: 1205846820}
+  - {fileID: 156985281}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2187,7 +2187,7 @@ Transform:
   - {fileID: 323708066}
   - {fileID: 670497973}
   m_Father: {fileID: 733245243}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1213686504
 GameObject:
